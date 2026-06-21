@@ -21,7 +21,7 @@ const contactItems = [
     icon: WhatsappIcon,
     label: "WhatsApp",
     value: siteConfig.phoneDisplay,
-    href: whatsappLink("Здравствуйте! Хочу записаться на ремонт инструмента."),
+    href: whatsappLink("Здравствуйте! Хочу записаться на ремонт техники."),
     external: true,
   },
   {

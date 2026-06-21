@@ -4,7 +4,7 @@ import { whatsappLink } from "@/lib/site.config";
 export function WhatsappButton() {
   return (
     <a
-      href={whatsappLink("Здравствуйте! Хочу узнать про ремонт инструмента.")}
+      href={whatsappLink("Здравствуйте! Хочу узнать про ремонт техники.")}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Написать в WhatsApp"

@@ -10,8 +10,8 @@ export function Services() {
     <Section id="services" className="bg-slate-50 dark:bg-slate-900">
       <SectionHeading
         eyebrow="Что мы ремонтируем"
-        title="Услуги сервисного центра"
-        description="Ремонтируем электрический и бензиновый инструмент любой сложности. Если вашего инструмента нет в списке — напишите нам, мы поможем."
+        title="Ремонт бытовой техники на дому"
+        description="Ремонтируем бытовую технику всех марок с выездом мастера на дом. Если вашей техники нет в списке — напишите нам, мы поможем."
       />
 
       <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

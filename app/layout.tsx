@@ -20,7 +20,7 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const title = `${siteConfig.name} — ремонт электроинструмента в ${siteConfig.city}`;
+const title = `${siteConfig.name} — ремонт бытовой техники в ${siteConfig.city}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         url: "/images/about-workshop.jpg",
         width: 900,
         height: 1125,
-        alt: `${siteConfig.name} — ремонт электроинструмента`,
+        alt: `${siteConfig.name} — ремонт бытовой техники`,
       },
     ],
   },

@@ -23,7 +23,7 @@ export function Logo({ tone = "dark" }: LogoProps) {
           {siteConfig.name}
         </span>
         <span className={`text-[11px] font-medium ${subColor}`}>
-          ремонт электроинструмента
+          ремонт бытовой техники
         </span>
       </span>
     </Link>

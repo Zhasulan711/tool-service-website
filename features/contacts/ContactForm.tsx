@@ -26,7 +26,7 @@ export function ContactForm() {
       "Здравствуйте! Заявка на ремонт с сайта.",
       `Имя: ${name}`,
       `Телефон: ${phone}`,
-      tool.trim() ? `Инструмент: ${tool}` : null,
+      tool.trim() ? `Техника: ${tool}` : null,
       message.trim() ? `Проблема: ${message}` : null,
     ]
       .filter(Boolean)
@@ -70,14 +70,14 @@ export function ContactForm() {
 
       <div className="flex flex-col gap-1.5">
         <label htmlFor="tool" className={labelStyles}>
-          Инструмент
+          Техника
         </label>
         <input
           id="tool"
           type="text"
           value={tool}
           onChange={(e) => setTool(e.target.value)}
-          placeholder="Например: перфоратор Bosch GBH 2-26"
+          placeholder="Например: холодильник Samsung No Frost"
           className={inputStyles}
         />
       </div>

@@ -59,7 +59,7 @@ export function Header() {
               {siteConfig.phoneDisplay}
             </a>
             <ThemeToggle />
-            <Button href={whatsappLink("Здравствуйте! Хочу узнать про ремонт инструмента.")} external variant="primary">
+            <Button href={whatsappLink("Здравствуйте! Хочу узнать про ремонт техники.")} external variant="primary">
               Оставить заявку
             </Button>
           </div>
@@ -99,7 +99,7 @@ export function Header() {
                 {siteConfig.phoneDisplay}
               </Button>
               <Button
-                href={whatsappLink("Здравствуйте! Хочу узнать про ремонт инструмента.")}
+                href={whatsappLink("Здравствуйте! Хочу узнать про ремонт техники.")}
                 external
                 variant="whatsapp"
                 size="lg"
