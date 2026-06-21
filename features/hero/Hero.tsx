@@ -11,9 +11,9 @@ import {
 import { phoneLink, siteConfig, whatsappLink } from "@/lib/site.config";
 
 const highlights = [
-  "Бесплатная диагностика",
+  "Выезд мастера на дом",
   "Оригинальные запчасти",
-  "Гарантия до 6 месяцев",
+  "Гарантия до 1 года",
 ];
 
 export function Hero() {
@@ -28,15 +28,15 @@ export function Hero() {
           <div className="flex flex-col gap-7">
             <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium ring-1 ring-white/15">
               <span className="flex h-2 w-2 rounded-full bg-accent" />
-              Сервисный центр в {siteConfig.city}
+              Выезд мастера по {siteConfig.city}
             </span>
 
             <h1 className="font-display text-3xl font-extrabold leading-[1.1] tracking-tight [hyphens:auto] break-words sm:text-5xl lg:text-6xl">
-              Ремонт <span className="text-accent">электроинструмента</span> любой сложности
+              Ремонт <span className="text-accent">бытовой техники</span> на дому
             </h1>
 
             <p className="max-w-xl text-lg leading-relaxed text-slate-300">
-              Чиним перфораторы, дрели, болгарки, сварочные аппараты и садовую технику всех брендов. Быстро, с гарантией и оригинальными запчастями.
+              Чиним холодильники, стиральные и посудомоечные машины, кондиционеры, плиты и духовки всех марок. Мастер приедет в день обращения — быстро, с гарантией и оригинальными запчастями.
             </p>
 
             <ul className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-x-6">
@@ -52,7 +52,7 @@ export function Hero() {
 
             <div className="flex flex-col gap-3 pt-2 sm:flex-row">
               <Button
-                href={whatsappLink("Здравствуйте! Хочу записаться на ремонт инструмента.")}
+                href={whatsappLink("Здравствуйте! Хочу записаться на ремонт техники.")}
                 external
                 variant="whatsapp"
                 size="lg"
@@ -70,8 +70,8 @@ export function Hero() {
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 shadow-2xl sm:aspect-square lg:aspect-[4/5]">
               <Image
-                src="/images/hero-drill.jpg"
-                alt="Мастер ремонтирует электроинструмент в сервисном центре"
+                src="/images/hero-appliance.jpg"
+                alt="Мастер ремонтирует бытовую технику"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -83,8 +83,8 @@ export function Hero() {
             <div className="absolute -left-4 top-6 flex items-center gap-3 rounded-2xl bg-accent px-4 py-3 shadow-xl sm:-left-6">
               <BoltIcon className="h-7 w-7 text-white" />
               <div>
-                <p className="text-xs font-medium text-white/80">Диагностика</p>
-                <p className="font-display text-base font-extrabold text-white">бесплатно за 1 день</p>
+                <p className="text-xs font-medium text-white/80">Выезд мастера</p>
+                <p className="font-display text-base font-extrabold text-white">в день обращения</p>
               </div>
             </div>
 
@@ -92,7 +92,7 @@ export function Hero() {
               <div className="flex items-center gap-2.5">
                 <ShieldIcon className="h-7 w-7 text-accent" />
                 <div>
-                  <p className="font-display text-lg font-bold text-white">6 мес.</p>
+                  <p className="font-display text-lg font-bold text-white">1 год</p>
                   <p className="text-xs text-slate-300">гарантия</p>
                 </div>
               </div>

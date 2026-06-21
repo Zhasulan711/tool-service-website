@@ -3,8 +3,8 @@ import { Container } from "@/components/ui/Container";
 const stats = [
   { value: "12+", label: "лет на рынке" },
   { value: "15 000+", label: "ремонтов выполнено" },
-  { value: "50+", label: "брендов обслуживаем" },
-  { value: "6 мес.", label: "гарантия на работы" },
+  { value: "50+", label: "марок техники" },
+  { value: "1 год", label: "гарантия на работы" },
 ];
 
 export function Stats() {

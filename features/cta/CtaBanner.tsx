@@ -15,10 +15,10 @@ export function CtaBanner() {
             <div className="max-w-xl">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
                 <BoltIcon className="h-4 w-4" />
-                Бесплатная диагностика
+                Выезд мастера на дом
               </span>
               <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-white sm:text-4xl">
-                Сломался инструмент? Починим быстро и с гарантией
+                Сломалась техника? Отремонтируем с выездом на дом
               </h2>
               <p className="mt-3 text-base text-white/90 sm:text-lg">
                 Оставьте заявку — ответим и рассчитаем стоимость ремонта в течение 15 минут.
@@ -27,7 +27,7 @@ export function CtaBanner() {
 
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row lg:flex-col xl:flex-row">
               <Button
-                href={whatsappLink("Здравствуйте! Хочу оставить заявку на ремонт инструмента.")}
+                href={whatsappLink("Здравствуйте! Хочу оставить заявку на ремонт техники.")}
                 external
                 size="lg"
                 className="!bg-white !text-accent-dark hover:!bg-slate-100"
