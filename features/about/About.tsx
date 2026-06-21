@@ -27,18 +27,6 @@ export function About() {
             />
           </div>
 
-          <div className="absolute -bottom-8 -right-4 hidden w-44 overflow-hidden rounded-2xl border-4 border-white shadow-xl dark:border-slate-950 sm:block">
-            <div className="relative aspect-[3/4]">
-              <Image
-                src="/images/about-master.jpg"
-                alt="Мастер сервисного центра"
-                fill
-                sizes="180px"
-                className="object-cover"
-              />
-            </div>
-          </div>
-
           <div className="absolute -left-4 bottom-10 rounded-2xl bg-accent px-5 py-4 shadow-xl">
             <p className="font-display text-3xl font-extrabold text-white">12+</p>
             <p className="text-sm text-white/90">лет на рынке</p>
