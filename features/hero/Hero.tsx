@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import {
@@ -6,7 +7,6 @@ import {
   WhatsappIcon,
   ShieldIcon,
   BoltIcon,
-  StarIcon,
 } from "@/components/icons";
 import { phoneLink, siteConfig, whatsappLink } from "@/lib/site.config";
 
@@ -31,7 +31,7 @@ export function Hero() {
               Сервисный центр в {siteConfig.city}
             </span>
 
-            <h1 className="font-display text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-3xl font-extrabold leading-[1.1] tracking-tight [hyphens:auto] break-words sm:text-5xl lg:text-6xl">
               Ремонт <span className="text-accent">электроинструмента</span> любой сложности
             </h1>
 
@@ -68,38 +68,40 @@ export function Hero() {
           </div>
 
           <div className="relative">
-            <div className="relative rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-              <div className="flex items-center justify-between rounded-2xl bg-accent px-5 py-4">
-                <div>
-                  <p className="text-sm font-medium text-white/80">Бесплатная диагностика</p>
-                  <p className="font-display text-2xl font-extrabold text-white">за 1 день</p>
-                </div>
-                <BoltIcon className="h-10 w-10 text-white" />
-              </div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 shadow-2xl sm:aspect-square lg:aspect-[4/5]">
+              <Image
+                src="/images/hero-drill.jpg"
+                alt="Мастер ремонтирует электроинструмент в сервисном центре"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
+            </div>
 
-              <div className="mt-4 grid grid-cols-2 gap-4">
-                <div className="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
-                  <ShieldIcon className="h-8 w-8 text-accent" />
-                  <p className="mt-3 font-display text-xl font-bold text-white">6 мес.</p>
-                  <p className="text-sm text-slate-300">гарантия на ремонт</p>
+            <div className="absolute -left-4 top-6 flex items-center gap-3 rounded-2xl bg-accent px-4 py-3 shadow-xl sm:-left-6">
+              <BoltIcon className="h-7 w-7 text-white" />
+              <div>
+                <p className="text-xs font-medium text-white/80">Диагностика</p>
+                <p className="font-display text-base font-extrabold text-white">бесплатно за 1 день</p>
+              </div>
+            </div>
+
+            <div className="absolute -bottom-5 left-6 right-6 flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/10 px-5 py-4 backdrop-blur-md sm:left-auto sm:right-6">
+              <div className="flex items-center gap-2.5">
+                <ShieldIcon className="h-7 w-7 text-accent" />
+                <div>
+                  <p className="font-display text-lg font-bold text-white">6 мес.</p>
+                  <p className="text-xs text-slate-300">гарантия</p>
                 </div>
-                <div className="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
-                  <div className="flex gap-0.5 text-accent">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <StarIcon key={i} className="h-4 w-4" />
-                    ))}
-                  </div>
-                  <p className="mt-3 font-display text-xl font-bold text-white">12+ лет</p>
-                  <p className="text-sm text-slate-300">опыта работы</p>
-                </div>
-                <div className="col-span-2 flex items-center gap-4 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/20 text-accent">
-                    <CheckIcon className="h-7 w-7" />
-                  </div>
-                  <div>
-                    <p className="font-display text-xl font-bold text-white">15 000+</p>
-                    <p className="text-sm text-slate-300">отремонтированных инструментов</p>
-                  </div>
+              </div>
+              <span className="h-9 w-px bg-white/15" />
+              <div className="flex items-center gap-2.5">
+                <CheckIcon className="h-7 w-7 text-accent" />
+                <div>
+                  <p className="font-display text-lg font-bold text-white">15 000+</p>
+                  <p className="text-xs text-slate-300">ремонтов</p>
                 </div>
               </div>
             </div>

@@ -5,7 +5,8 @@ import { Header } from "@/features/layout/Header";
 import { Footer } from "@/features/layout/Footer";
 import { WhatsappButton } from "@/features/whatsapp/WhatsappButton";
 import { themeScript } from "@/features/theme/theme-script";
-import { siteConfig } from "@/lib/site.config";
+import { JsonLd } from "@/features/seo/JsonLd";
+import { seoKeywords, siteConfig } from "@/lib/site.config";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,27 +20,56 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const title = `${siteConfig.name} — ремонт электроинструмента в ${siteConfig.city}`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — ремонт электроинструмента в ${siteConfig.city}`,
+    default: title,
     template: `%s — ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    "ремонт электроинструмента",
-    "ремонт перфоратора",
-    "ремонт болгарки",
-    "ремонт шуруповёрта",
-    "сервисный центр инструмента",
-    siteConfig.city,
-  ],
+  applicationName: siteConfig.name,
+  keywords: seoKeywords,
+  authors: [{ name: siteConfig.legalName }],
+  creator: siteConfig.legalName,
+  publisher: siteConfig.legalName,
+  category: "Сервисный центр",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "ru_RU",
-    title: `${siteConfig.name} — ремонт электроинструмента в ${siteConfig.city}`,
+    url: siteConfig.url,
+    title,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/images/about-workshop.jpg",
+        width: 900,
+        height: 1125,
+        alt: `${siteConfig.name} — ремонт электроинструмента`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description: siteConfig.description,
+    images: ["/images/about-workshop.jpg"],
   },
 };
 
@@ -57,7 +87,8 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="flex min-h-full flex-col bg-white font-sans text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+      <body className="flex min-h-full flex-col overflow-x-clip bg-white font-sans text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+        <JsonLd />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
