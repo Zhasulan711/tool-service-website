@@ -13,13 +13,40 @@ export const siteConfig = {
   hours: "Пн–Сб: 9:00–19:00, Вс — выходной",
   hoursShort: "Пн–Сб 9:00–19:00",
   url: "https://master1.kz",
+  priceRange: "₸₸",
+  geo: {
+    latitude: 43.238949,
+    longitude: 76.889709,
+  },
+  openingHours: {
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "09:00",
+    closes: "19:00",
+  },
 } as const;
 
+export const seoKeywords = [
+  "Мастер 1",
+  "Мастер 1 Алматы",
+  "Мастер 1 ремонт инструмента",
+  "сервисный центр Мастер 1",
+  "ремонт электроинструмента Алматы",
+  "ремонт электроинструмента",
+  "ремонт перфоратора",
+  "ремонт болгарки",
+  "ремонт шуруповёрта",
+  "ремонт дрели",
+  "ремонт сварочного аппарата",
+  "ремонт компрессора",
+  "ремонт бензопилы",
+  "сервисный центр инструмента Алматы",
+];
+
 export const navLinks = [
+  { label: "О сервисе", href: "#about" },
   { label: "Услуги", href: "#services" },
-  { label: "Преимущества", href: "#advantages" },
   { label: "Как мы работаем", href: "#process" },
-  { label: "Бренды", href: "#brands" },
+  { label: "Работы", href: "#gallery" },
   { label: "Контакты", href: "#contacts" },
 ] as const;
 

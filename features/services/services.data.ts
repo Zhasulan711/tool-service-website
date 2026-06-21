@@ -1,68 +1,57 @@
-import type { ComponentType, SVGProps } from "react";
-import {
-  DrillIcon,
-  GrinderIcon,
-  SawIcon,
-  SparkIcon,
-  CompressorIcon,
-  LeafIcon,
-  WrenchIcon,
-  PackageIcon,
-} from "@/components/icons";
-
 export type Service = {
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  image: string;
   title: string;
-  description: string;
+  subtitle: string;
+  price: string;
 };
 
 export const services: Service[] = [
   {
-    icon: DrillIcon,
+    image: "/images/svc-drill.jpg",
     title: "Перфораторы и дрели",
-    description:
-      "Ремонт перфораторов, дрелей, шуруповёртов и отбойных молотков: замена щёток, патронов, редукторов.",
+    subtitle: "Дрели, шуруповёрты, отбойные молотки",
+    price: "от 3 000 ₸",
   },
   {
-    icon: GrinderIcon,
+    image: "/images/svc-grinder.jpg",
     title: "Болгарки (УШМ)",
-    description:
-      "Восстановление углошлифовальных машин: подшипники, статор, ротор, кнопка пуска и регулятор оборотов.",
+    subtitle: "Подшипники, статор, ротор, кнопка пуска",
+    price: "от 2 500 ₸",
   },
   {
-    icon: SawIcon,
+    image: "/images/svc-saw.jpg",
     title: "Пилы и лобзики",
-    description:
-      "Ремонт дисковых пил, электролобзиков и сабельных пил с заменой изношенных узлов.",
+    subtitle: "Дисковые, сабельные пилы и электролобзики",
+    price: "от 3 000 ₸",
   },
   {
-    icon: SparkIcon,
+    image: "/images/svc-welder.jpg",
     title: "Сварочные аппараты",
-    description:
-      "Диагностика и ремонт инверторных и полуавтоматических сварочных аппаратов любой мощности.",
+    subtitle: "Инверторы и полуавтоматы любой мощности",
+    price: "от 4 000 ₸",
   },
   {
-    icon: CompressorIcon,
+    image: "/images/svc-compressor.jpg",
     title: "Компрессоры",
-    description:
-      "Обслуживание и ремонт воздушных компрессоров: клапаны, поршневая группа, реле давления.",
+    subtitle: "Клапаны, поршневая группа, реле давления",
+    price: "от 5 000 ₸",
   },
   {
-    icon: LeafIcon,
+    image: "/images/svc-garden.jpg",
     title: "Садовая техника",
-    description:
-      "Ремонт газонокосилок, триммеров, бензопил и мотокос — электрических и бензиновых.",
+    subtitle: "Бензопилы, триммеры, газонокосилки, мотокосы",
+    price: "от 4 000 ₸",
   },
   {
-    icon: WrenchIcon,
+    image: "/images/svc-maintenance.jpg",
     title: "Техобслуживание",
-    description:
-      "Плановое ТО, чистка, смазка и профилактика для продления срока службы инструмента.",
+    subtitle: "Чистка, смазка и профилактика инструмента",
+    price: "от 2 000 ₸",
   },
   {
-    icon: PackageIcon,
+    image: "/images/work-6.jpg",
     title: "Запчасти и расходники",
-    description:
-      "Подбор и продажа оригинальных запчастей, щёток, дисков и аксессуаров под ваш инструмент.",
+    subtitle: "Оригинальные щётки, диски и аксессуары",
+    price: "по запросу",
   },
 ];
